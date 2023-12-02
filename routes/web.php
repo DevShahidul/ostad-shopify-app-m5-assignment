@@ -22,4 +22,7 @@ Route::middleware(['verify.shopify'])->group(function () {
     Route::get('/shop', function () {
         return view('shop');
     })->name('shop');
+    Route::get('/collections', function () {
+        return view('collections');
+    })->name('collections');
 });
