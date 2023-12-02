@@ -25,7 +25,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## Installation
 - You need to clone this [repository](https://github.com/DevShahidul/ostad-shopify-app-m5-assignment.git) using the following command: `git clone https://github.com/DevShahidul/ostad-shopify-app-m5-assignment.git`
 - Run `composer install` to install the dependencies
-- Setup the .env file as your shopify app information
+- Setup the .env file as your shopify app information and database
 
 
 ## Code of Conduct
