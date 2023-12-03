@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CollectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,12 @@ Route::middleware(['verify.shopify'])->group(function () {
     Route::get('/shop', function () {
         return view('shop');
     })->name('shop');
-    Route::get('/collections', function () {
-        return view('collections');
-    })->name('collections');
+
+    Route::get('/collections', [CollectionController::class, 'index'])->name('collection.index');
+    Route::get('/collections/create', [CollectionController::class, 'create'])->name('collection.create');
+    Route::post('/collections', [CollectionController::class, 'store'])->name('collection.store');
+
+    Route::get('/products', [ProductController::class, 'index'])->name('product.index');
+    Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
+    Route::post('/products', [ProductController::class, 'store'])->name('product.store');
 });
